@@ -33,9 +33,7 @@ class test_base(unittest.TestCase):
         self.assertEqual(-20, b.id)
 
     def test_id_string(self):
-        '''
-            Sending an id that is not an int
-        '''
+      
         b = Base("Betty")
         self.assertEqual("Betty", b.id)
 
