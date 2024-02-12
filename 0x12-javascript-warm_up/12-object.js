@@ -1,7 +1,8 @@
 #!/usr/bin/node
-
-let value = 12;
-console.log("Original :", value);
-
-value = 89;
-console.log("Updated :", value);
+const myObject = {
+    type: 'object',
+    value: 12
+  };
+  console.log(myObject);
+  myObject.value = 89;
+  console.log(myObject);
