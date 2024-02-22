@@ -13,12 +13,12 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=db_name)
     
     cursor = db.cursor()
-    cursor.execute("SELECT CONCAT('(', id, ', \'', name, '\')') AS Rresult FROM states")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
 
-    rows = cursor.fetchall()
+    state = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    for state in states:
+        print(state)
 
     cursor.close()
-  
+    db.Close()
