@@ -4,17 +4,23 @@ lists all states from the database
 has startting letter similar to the user input
 '''
 import MySQLdb
-from sys import argv
+import sys 
 
 
 if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    statename= sys.argv[4]
+
+
     cont = MySQLdb.connect(
-        host="localhost", port=3306, user=argv[1], password=argv[2], database=argv[3])
+        host="localhost", port=3306, user=username, passwd=password, db=db_name)
     cursor = cont.cursor()
     cursor.execute(
             "SELECT * FROM states WHERE name LIKE"
-            " '{:s}' ORDER BY id ASC".format(argv[4]))
+            " '{:s}' ORDER BY id ASC".format(statename))
     db = cursor.fetchall()
     for i in db:
-        if i[1] == argv[4]:
+        if i[1] == statename:
             print(i)
