@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+"""
+lists all cities from the database
+"""
 
-    import MySQLdb
-    from sys import argv
+import MySQLdb
+from sys import argv
 
 
 if __name__ == "__main__":
 
-"""
-lists all cities from the database
-"""
+   
 
 
     cont = 0
