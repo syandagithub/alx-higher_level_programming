@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-
-import MySQLdb
-from sys import argv
-
 '''
 lists all states from the database
 has startting letter similar to the user input
 '''
+import MySQLdb
+from sys import argv
+
+
 if __name__ == "__main__":
     cont = MySQLdb.connect(
         host="localhost", port=3306, user=argv[1], password=argv[2], database=argv[3])
