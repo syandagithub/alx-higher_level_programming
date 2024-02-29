@@ -1,3 +1,3 @@
 #!/bin/bash
 # It sends a request to an URL with curl
-curl -s "$1" | wc -c
+curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
