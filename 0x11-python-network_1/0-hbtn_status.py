@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""It fetches the url https://alx-intranet.hbtn.io/status."""
+"""It fetches the url https://alx-intranet.hbtn.io/status"""
 import urllib.request
 
 if __name__ == "__main__":
