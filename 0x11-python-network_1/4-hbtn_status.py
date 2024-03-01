@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Fetches the url"""
 import requests
 
 if __name__ == "__main__":
